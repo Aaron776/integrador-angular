@@ -11,6 +11,7 @@ export class AuthService {
 private api='http://localhost:8080/api/v1/auth/admin';
   constructor(private http:HttpClient) {
    }
+
    login(user:UserModel):Observable<any>{
      return this.http.post(this.api, user).pipe(
       map(response=>response),
