@@ -7,11 +7,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 import {AuthService} from './services/auth.service';
+import { ViewActivityComponent } from './view-activity/view-activity.component';
+import { CreateActivityComponent } from './create-activity/create-activity.component';
+import { ListEmployeeComponent } from './list-employee/list-employee.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ErrorNotFoundComponent
+    ErrorNotFoundComponent,
+    ViewActivityComponent,
+    CreateActivityComponent,
+    ListEmployeeComponent
   ],
   imports: [
     BrowserModule,
