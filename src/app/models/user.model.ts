@@ -1,8 +1,9 @@
+import { AreaModel } from './area.model';
 export interface UserModel {
     ci?: string;
     name?: string;
-    lastname?: string;
+    lastName?: string;
     password?: string;
     position?: string;
-    area?: string;
+    area?: AreaModel;
 }
