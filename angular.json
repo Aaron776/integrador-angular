@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "integrador-angular"
+  "defaultProject": "integrador-angular",
+  "cli": {
+    "analytics": "1dd9fafd-7284-404d-a215-67eb002346b4"
+  }
 }
