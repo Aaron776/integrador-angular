@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   login():void{
     this.authService.login(this.user).subscribe(
       data=>{
+        this.router.navigate(['/employees']);
         localStorage.setItem('area', data.id);
       }
     )

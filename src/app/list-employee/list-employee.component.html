@@ -1,0 +1,20 @@
+<h2 style="text-align: center;">Lista de Empleados</h2>
+
+<table class="table" style="margin-top: 100px;">
+  <thead>
+    <tr>
+      <th scope="col">Cédula</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees" (click)="navigateToEmployee(employee)">
+      <td>{{employee.ci}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.lastName}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
