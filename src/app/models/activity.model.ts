@@ -4,5 +4,5 @@ export interface ActivityModel {
     description?: string;
     message?: string;
     title?: string;
-    employe_ci?: string;
+    employee_ci?: string;
 }
