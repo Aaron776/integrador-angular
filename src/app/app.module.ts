@@ -10,11 +10,9 @@ import { AuthService } from './services/auth.service';
 import { ViewActivityComponent } from './view-activity/view-activity.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import { EmployeeService } from './services/employee.service';
-<<<<<<< HEAD
-import {ActivityService }  from './services/activity.service';
-=======
-import { ActivityDetailComponent } from './activity-detail/activity-detail.component';
->>>>>>> develop
+import { ActivityService }  from './services/activity.service';
+import {ActivityDetailComponent} from './activity-detail/activity-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
