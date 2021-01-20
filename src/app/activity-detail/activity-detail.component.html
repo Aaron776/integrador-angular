@@ -1,4 +1,3 @@
-
 <h2 style="margin-top: 35px; text-align: center;">Actividad del Empleado </h2>
 <table class="table table-bordered" style="margin-top: 70px;text-align: center;">
     <thead>
@@ -7,15 +6,15 @@
             <th scope="col">Descripción</th>
             <th scope="col">Mensaje</th>
             <th scope="col">Empleado</th>
-            
+
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Otto</td>            
+            <th scope="row">{{activity.title}}</th>
+            <td>{{activity.description}}</td>
+            <td>{{activity.message}}</td>
+            <td>{{activity.employee.name}} {{activity.employee.lastName}}</td>
         </tr>
     </tbody>
 </table>

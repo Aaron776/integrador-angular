@@ -2,7 +2,7 @@ import { AreaModel } from "./area.model";
 
 export interface EmployeeModel {
     ci?: string;
-    last_name?: string;
+    lastName?: string;
     name?: string;
     password?: string;
     position?: string;

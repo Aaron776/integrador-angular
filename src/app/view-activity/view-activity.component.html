@@ -1,86 +1,46 @@
-<header id="main-header">
-		
-    <a id="logo-header" href="#">
-        <span class="site-name">EmpresaAMK</span>
-        <span class="site-desc">Diseño web / WordPress / Tutoriales</span>
-    </a> <!-- / #logo-header -->
-  
-    <nav>
-        <ul style="text-align: left;">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Acerca de</a></li>
-            <li><a href="">Contacto</a></li>
-        </ul>
-    </nav><!-- / nav -->
-  
-  </header><!-- / #main-header -->  
-
 <h2 style="margin-bottom: 30px; text-align: center; margin-top: 20px;">
-    Listado de Actividades del Empleado 
+    Listado de Actividades del Empleado {{name}} {{lastName}}
 </h2>
 <h2 style="margin-bottom: 30px; text-align: center; margin-left: 100px;">
     Crear Actividad
 
 </h2>
-<form style="margin-left: 100px; text-align: center;">
+<div style="margin-left: 100px; text-align: center;">
     <div class="form-group ">
         <label for=" exampleFormControlInput1 ">Titulo</label>
 
-        <input type="email " class="form-control " id="exampleFormControlInput1 " placeholder=" " style="width: 500px;margin-left: 250px; text-align: center;">
+        <input type="email " class="form-control " id="exampleFormControlInput1 " [(ngModel)]="activity.title" placeholder=" "
+            style="width: 500px;margin-left: 250px; text-align: center;">
 
     </div>
     <div class="form-group ">
         <label for="exampleFormControlTextarea1 ">Descripcion</label>
-        <textarea class="form-control " id="exampleFormControlTextarea1 " rows="3 " style="width: 550px; margin-left: 230px;"></textarea>
+        <textarea class="form-control " id="exampleFormControlTextarea1 " [(ngModel)]="activity.description" rows="3 "
+            style="width: 550px; margin-left: 230px;"></textarea>
     </div>
 
-    <button class="btn btn-primary">Crear Actividad</button>
+    <button class="btn btn-primary" (click)="createActivity()">Crear Actividad</button>
 
-    
-    <h2 style="margin-bottom: 50px; margin-top: 35px;">
-        Listado de Actividades
-    </h2>
-    <div class="div1">
+</div>
+<h2 style="margin-bottom: 50px; margin-top: 35px;">
+    Listado de Actividades
+</h2>
+<div class="div1">
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Id</th>
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
                 <th scope="col">Date</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                
+            <tr *ngFor="let activity of activities" (click)="navigateToActivity(activity)">
+                <td>{{activity.title}}</td>
+                <td>{{activity.description}}</td>
+                <td>{{activity.date}}</td>
 
+            </tr>
         </tbody>
     </table>
+</div>
