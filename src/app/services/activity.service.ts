@@ -10,8 +10,18 @@ export class ActivityService {
   private api = 'http://localhost:8080/api/v1/activities';
   constructor(private http: HttpClient) {
   }
-  getAllActivityByEmployee(id: number): Observable<any> {
+  getAllActivitiesByEmployee(id: string): Observable<any> {
     return this.http.get(this.api + '/employee/' + id).pipe(
+      map(response => response),
+      catchError(error => {
+        alert(error.error);
+        return error;
+      })
+    );
+  }
+
+  getActivityById(id:string):Observable<any>{
+    return this.http.get(this.api + '/' + id).pipe(
       map(response => response),
       catchError(error => {
         alert(error.error);
