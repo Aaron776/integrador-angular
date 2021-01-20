@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'employees', component: ListEmployeeComponent },
   { path: 'activity/:id/:name/:lastName', component: ViewActivityComponent },
-  { path: 'detail',component:ActivityDetailComponent},  
+  { path: 'detail/:id',component:ActivityDetailComponent},  
   { path: '**', pathMatch: 'full', component: ErrorNotFoundComponent }
 
 ];
