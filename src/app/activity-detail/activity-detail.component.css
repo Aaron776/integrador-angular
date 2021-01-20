@@ -62,3 +62,7 @@ nav {
                 }
 
 
+
+.div1 {
+    overflow: scroll;
+}
