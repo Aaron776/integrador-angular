@@ -1,8 +1,10 @@
+
+import{EmployeeModel} from './employee.model';
 export interface ActivityModel {
     id?:string;
-    date?: Date;
+    date?: string;
     description?: string;
     message?: string;
     title?: string;
-    employee_ci?: string;
+    employee?: EmployeeModel;
 }
